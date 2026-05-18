@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="_components.css">
+<style>
+  .card { padding: 24px 30px; }
+  .row { display:flex; gap: 10px; align-items:center; flex-wrap:wrap; margin-top: 10px; }
+  .sec { padding: 14px 0; }
+  .sec + .sec { border-top: 1px solid var(--border-soft); }
+  .lab { font: 500 11px/1 var(--font-mono); color: var(--fg-faint); letter-spacing: 0.04em; margin-bottom: 8px; }
+</style></head>
+<body class="on-dark">
+<div class="card">
+  <div class="between"><span class="label">Tags + "new" badge</span><span class="meta">Semantic chips · Amber spark</span></div>
+  <div class="sec">
+    <div class="lab">SEMANTIC TAGS</div>
+    <div class="row">
+      <span class="tag tag-on-dark">archived</span>
+      <span class="tag tag-info">info</span>
+      <span class="tag tag-success">backed up locally</span>
+      <span class="tag tag-warning">capsule almost full</span>
+      <span class="tag tag-error">device offline</span>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="lab">NEW BADGE</div>
+    <div class="row">
+      <span class="badge-new">new</span>
+      <span class="badge-new">07.2026</span>
+      <span class="badge-new">batch 02</span>
+    </div>
+  </div>
+</div>
+</body></html>

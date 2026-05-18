@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="_components.css">
+<style>
+  .card { padding: 24px 30px; }
+  .grid { display: grid; grid-template-columns: auto 1fr; gap: 14px 18px; align-items: center; }
+  .col-label { font: 500 11px/1 var(--font-mono); color: var(--fg-faint); letter-spacing: 0.04em; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+</style></head>
+<body class="on-dark">
+<div class="card">
+  <div class="between" style="margin-bottom:14px"><span class="label">Buttons · Secondary + Outline + Text</span><span class="meta">Quiet hierarchy</span></div>
+  <div class="grid">
+    <span class="col-label">secondary</span>
+    <div class="row">
+      <button class="btn btn-secondary btn-lg">Show my souvenir</button>
+      <button class="btn btn-secondary btn-md">Learn more</button>
+      <button class="btn btn-secondary btn-sm">Skip</button>
+    </div>
+    <span class="col-label">outline</span>
+    <div class="row">
+      <button class="btn btn-outline btn-lg">Schedule a call</button>
+      <button class="btn btn-outline btn-md">Read the manifesto</button>
+    </div>
+    <span class="col-label">text</span>
+    <div class="row">
+      <button class="btn btn-text btn-md">View specs →</button>
+      <button class="btn btn-text btn-md">Sign in</button>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,72 @@
+/* Landing kit token layer — pulls in the system + component primitives */
+@import url("../../colors_and_type.css");
+@import url("../../preview/_components.css");
+
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+* { box-sizing: border-box; }
+img { max-width: 100%; display: block; }
+button { font: inherit; }
+
+/* Lucide SVG sizing — fills the wrapper, currentColor inheritance */
+.lucide-wrap svg { width: 100%; height: 100%; stroke: currentColor; fill: none;
+  stroke-width: var(--sw, 1.75); stroke-linecap: round; stroke-linejoin: round; }
+
+/* Section-level type — shared across Capsules / Manifesto / Specs / Reserve */
+.em-h2 {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(40px, 5vw, 64px); line-height: 1.04;
+  letter-spacing: -0.045em; color: var(--fg); margin: 0;
+}
+.em-lede {
+  font: 400 18px/1.55 var(--font-body); color: var(--fg-muted);
+  letter-spacing: -0.005em; margin: 0;
+}
+
+/* Page container — pulled from Figma 1328 max + 56px gutter */
+.container {
+  width: 100%;
+  max-width: 1328px;
+  margin: 0 auto;
+  padding-left: clamp(20px, 4vw, 56px);
+  padding-right: clamp(20px, 4vw, 56px);
+}
+
+/* Section rhythm */
+.section { padding-top: clamp(64px, 8vw, 112px); padding-bottom: clamp(64px, 8vw, 112px); }
+.section-tight { padding-top: clamp(48px, 6vw, 80px); padding-bottom: clamp(48px, 6vw, 80px); }
+
+/* Eyebrow tag (small, lowercase, used over section headings) */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 12px; line-height: 1; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--patina-300);
+  padding: 7px 10px; border-radius: var(--radius-xs);
+  background: rgba(146,134,23,0.10); border: 1px solid rgba(146,134,23,0.18);
+}
+.eyebrow.bone { color: var(--patina-600); background: rgba(146,134,23,0.10); border-color: rgba(146,134,23,0.22); }
+
+/* Hairline */
+.hairline { height: 1px; background: var(--border); width: 100%; }
+
+/* Helpers */
+.stack-1 { display: flex; flex-direction: column; gap: 8px; }
+.stack-2 { display: flex; flex-direction: column; gap: 16px; }
+.stack-3 { display: flex; flex-direction: column; gap: 24px; }
+.stack-4 { display: flex; flex-direction: column; gap: 32px; }
+.row     { display: flex; align-items: center; gap: 16px; }
+.row-2   { display: flex; align-items: center; gap: 24px; }
+
+/* Mark icon (svg <use href="#logo">) */
+.mark { width: 28px; height: 28px; color: var(--patina-500); display: inline-block; }
+.mark svg { width: 100%; height: 100%; display: block; }
+.wordmark { font-family: var(--font-display); font-weight: 500; font-size: 22px; letter-spacing: -0.03em; color: var(--fg); }
+
+/* Photo frames */
+.photo {
+  background-color: var(--surface-2);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+}

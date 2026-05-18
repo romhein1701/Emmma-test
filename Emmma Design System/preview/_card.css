@@ -1,0 +1,51 @@
+/* Common chrome for design-system preview cards.
+   Each card is rendered into a 700px-wide frame and stands alone. */
+@import url("../colors_and_type.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.card {
+  box-sizing: border-box;
+  width: 700px;
+  padding: 28px 32px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+.card.light { background: var(--bone-50); color: var(--carbon-100); }
+
+.row { display: flex; align-items: center; gap: 16px; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.between { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-subtle);
+}
+.meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.swatch {
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+}
+.swatch.outline-dark { border: 1px solid rgba(247,243,242,0.06); }
+
+/* Reset for in-card sample components */
+button { font: inherit; }

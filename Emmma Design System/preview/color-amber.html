@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; margin-top: 14px; align-items: stretch; }
+  .big {
+    background: #E1712B; border-radius: 14px; padding: 18px; color: var(--bone-50);
+    display:flex; flex-direction:column; justify-content:space-between; min-height: 168px;
+    border: 1px solid rgba(247,243,242,0.06);
+  }
+  .big .num { font: 500 56px/1 var(--font-display); letter-spacing: -0.04em; }
+  .big .sub { font: 500 12px/1.6 var(--font-ui); letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.92; }
+  .ramp { display: grid; grid-template-rows: repeat(5, 1fr); gap: 6px; }
+  .step { display: flex; justify-content: space-between; align-items: center; padding: 0 10px;
+    border-radius: 6px; font: 500 11px/1 var(--font-mono); border: 1px solid rgba(247,243,242,0.06); }
+  .step .n { font-family: var(--font-ui); font-weight: 500; }
+  .step .h { color: var(--linen-300); }
+  .note { margin-top: 14px; font: 400 12px/1.5 var(--font-body); color: var(--fg-subtle); max-width: 60ch; }
+</style></head>
+<body>
+<div class="card">
+  <div class="between">
+    <span class="label">Amber — accent · "new"</span>
+    <span class="meta">Emotional spark · #E1712B</span>
+  </div>
+  <div class="hero">
+    <div class="big">
+      <div class="num">new</div>
+      <div>
+        <div class="sub">Amber 400</div>
+        <div style="font: 500 13px/1 var(--font-mono); margin-top: 4px;">#E1712B</div>
+      </div>
+    </div>
+    <div class="ramp">
+      <div class="step" style="background:#F8D8BC;color:#993F0A"><span class="n">amber-200</span><span class="h">F8D8BC</span></div>
+      <div class="step" style="background:#F0A96B;color:#3F1F0A"><span class="n">amber-300</span><span class="h">F0A96B</span></div>
+      <div class="step" style="background:#C95B16;color:#FAFAF7"><span class="n">amber-500</span><span class="h">C95B16</span></div>
+      <div class="step" style="background:#993F0A;color:#FAFAF7"><span class="n">amber-600</span><span class="h">993F0A</span></div>
+      <div class="step" style="background:rgba(225,113,43,0.10);color:#E1712B"><span class="n">amber-tint</span><span class="h">0A E17/10%</span></div>
+    </div>
+  </div>
+  <p class="note">One Amber gesture per screen. Reserved for `new`-badge capsules, "Innovation" eyebrow tags, and secondary CTAs.</p>
+</div>
+</body></html>

@@ -1,0 +1,288 @@
+/* =========================================================
+   Emmma — Foundations: Color + Type
+   Anti-cloud. Privacy-first. Swiss-made phygital memory.
+   Sourced from Foundations-Emmma / Web-Components-Emmma .fig
+   ========================================================= */
+
+/* ---------- Fonts -------------------------------------- */
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo-VariableFont_wdth_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-stretch: 62.5% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo-Italic-VariableFont_wdth_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-stretch: 62.5% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* JetBrains Mono + Inter loaded from Google Fonts as fallback;
+   replace with local TTFs when available.                        */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  /* ===== CORE PALETTE — raw tokens ===== */
+
+  /* Patina (primary brand olive — captured Swiss aged-brass) */
+  --patina-100: #F4F2D7;
+  --patina-200: #E6E2A6;
+  --patina-300: #C7BE5C;
+  --patina-400: #A89B33;
+  --patina-500: #928617;   /* primary */
+  --patina-600: #7D7316;
+  --patina-700: #635B10;
+  --patina-800: #3F3A0A;
+
+  /* Amber (accent — emotional warmth, "new" / spark) */
+  --amber-200: #F8D8BC;
+  --amber-300: #F0A96B;
+  --amber-400: #E1712B;
+  --amber-500: #C95B16;
+  --amber-600: #993F0A;
+
+  /* Bone (light canvas, paper-cream — physical print feel) */
+  --bone-50:  #FAFAF7;
+  --bone-100: #F7F3ED;
+  --bone-200: #F5F5EE;
+  --bone-300: #EEEDE2;
+  --bone-400: #E2E0CF;
+  --bone-500: #D1CEBC;     /* hairline divider on light */
+  --bone-600: #9E9B87;     /* tertiary text on light */
+
+  /* Carbon (dark canvas, device housing) */
+  --carbon-50:  #524A48;
+  --carbon-100: #2E2928;   /* heading text on light, border on dark */
+  --carbon-200: #292625;
+  --carbon-300: #1E1E1E;
+  --carbon-400: #1A1716;   /* card surface on dark */
+  --carbon-500: #0F0E0D;   /* canvas on dark */
+  --carbon-black: #000000;
+
+  /* Linen (warm neutrals on dark — text and chrome on carbon) */
+  --linen-50:  #F7F3F2;    /* primary text on dark */
+  --linen-100: #EEEDE2;
+  --linen-200: #D6C8C5;    /* secondary text on dark */
+  --linen-300: #9E8F8A;    /* tertiary text on dark */
+  --linen-400: #7A6F6C;    /* quaternary text on dark */
+  --linen-500: #50403D;
+
+  /* Semantic accent (kept distinct from brand) */
+  --signal-info:    #2A6FDB;
+  --signal-success: #1F8A5B;
+  --signal-warning: #928617; /* uses patina */
+  --signal-error:   #C53030;
+  --signal-violet:  #9747FF; /* badge "new" alt */
+
+  /* ===== SEMANTIC TOKENS — dark (default canvas) ===== */
+  --bg:           var(--carbon-500);
+  --bg-raised:    var(--carbon-400);
+  --bg-sunken:    #07060A;
+  --bg-tint:      rgba(146, 134, 23, 0.08);
+
+  --surface:      var(--carbon-400);
+  --surface-2:    #221F1E;
+  --surface-inv:  var(--bone-50);
+
+  --border:       var(--carbon-100);
+  --border-soft:  #221F1E;
+  --border-strong:var(--linen-400);
+
+  --fg:           var(--linen-50);
+  --fg-muted:     var(--linen-200);
+  --fg-subtle:    var(--linen-300);
+  --fg-faint:     var(--linen-400);
+  --fg-inverse:   var(--carbon-100);
+
+  --brand:        var(--patina-500);
+  --brand-hover:  var(--patina-400);
+  --brand-press:  var(--patina-600);
+  --brand-fg:     var(--bone-50);
+
+  --accent:       var(--amber-400);
+  --accent-fg:    var(--bone-50);
+
+  /* ===== Shape ===== */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --bw-hair: 1px;
+  --bw-edge: 2px;
+
+  /* ===== Spacing (8pt) ===== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ===== Elevation (Emmma uses one whisper shadow + a deep one) ===== */
+  --elev-0: none;
+  --elev-1: 0 1px 2px 0 rgba(23, 23, 23, 0.05);
+  --elev-2: 0 4px 12px -2px rgba(15, 14, 13, 0.12),
+            0 2px 4px -2px rgba(15, 14, 13, 0.08);
+  --elev-3: 0 18px 48px -12px rgba(15, 14, 13, 0.45),
+            0 4px 12px -4px rgba(15, 14, 13, 0.35);
+  --inner-edge: inset 0 0 0 1px rgba(247, 243, 242, 0.04);
+
+  /* ===== Motion ===== */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 380ms;
+
+  /* ===== Type families ===== */
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-ui:      "Inter", "Archivo", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* Light surface scope — apply via .surface-light or [data-theme="light"] */
+[data-theme="light"], .surface-light {
+  --bg:          var(--bone-50);
+  --bg-raised:   var(--bone-200);
+  --bg-sunken:   var(--bone-300);
+  --bg-tint:     rgba(146, 134, 23, 0.10);
+
+  --surface:     var(--bone-200);
+  --surface-2:   var(--bone-300);
+  --surface-inv: var(--carbon-500);
+
+  --border:       var(--bone-500);
+  --border-soft:  var(--bone-400);
+  --border-strong:var(--carbon-100);
+
+  --fg:         var(--carbon-100);
+  --fg-muted:   var(--carbon-50);
+  --fg-subtle:  var(--bone-600);
+  --fg-faint:   #B0AC95;
+  --fg-inverse: var(--linen-50);
+
+  --brand-fg:   var(--bone-50);
+  --accent-fg:  var(--bone-50);
+}
+
+/* =========================================================
+   TYPE SCALE — semantic, mapped to the 4-step Archivo ramp
+   ========================================================= */
+:root {
+  /* Display + headings (Archivo, tight tracking) */
+  --t-display-size: 96px;
+  --t-display-lh:   1.04;
+  --t-display-trk:  -0.05em;
+  --t-display-wt:   500;
+
+  --t-h1-size: 64px;
+  --t-h1-lh:   1.06;
+  --t-h1-trk:  -0.045em;
+  --t-h1-wt:   500;
+
+  --t-h2-size: 40px;
+  --t-h2-lh:   1.12;
+  --t-h2-trk:  -0.035em;
+  --t-h2-wt:   500;
+
+  --t-h3-size: 32px;
+  --t-h3-lh:   1.18;
+  --t-h3-trk:  -0.030em;
+  --t-h3-wt:   500;
+
+  --t-h4-size: 20px;
+  --t-h4-lh:   1.40;
+  --t-h4-trk:  -0.020em;
+  --t-h4-wt:   500;
+
+  --t-lead-size: 20px;
+  --t-lead-lh:   1.55;
+  --t-lead-trk:  -0.005em;
+  --t-lead-wt:   400;
+
+  --t-body-size: 16px;
+  --t-body-lh:   1.55;
+  --t-body-trk:  0;
+  --t-body-wt:   400;
+
+  --t-ui-size: 16px;
+  --t-ui-lh:   1.5;
+  --t-ui-trk:  -0.005em;
+  --t-ui-wt:   500;
+
+  --t-small-size: 14px;
+  --t-small-lh:   1.42;
+  --t-small-trk:  0;
+  --t-small-wt:   500;
+
+  --t-caption-size: 12px;
+  --t-caption-lh:   1.6;
+  --t-caption-trk:  0.005em;
+  --t-caption-wt:   500;
+
+  --t-mono-size: 14px;
+  --t-mono-lh:   1.55;
+  --t-mono-trk:  0;
+  --t-mono-wt:   500;
+}
+
+/* Atomic type classes for direct use --------------------- */
+.t-display { font-family: var(--font-display); font-weight: var(--t-display-wt);
+  font-size: var(--t-display-size); line-height: var(--t-display-lh);
+  letter-spacing: var(--t-display-trk); }
+.t-h1 { font-family: var(--font-display); font-weight: var(--t-h1-wt);
+  font-size: var(--t-h1-size); line-height: var(--t-h1-lh);
+  letter-spacing: var(--t-h1-trk); }
+.t-h2 { font-family: var(--font-display); font-weight: var(--t-h2-wt);
+  font-size: var(--t-h2-size); line-height: var(--t-h2-lh);
+  letter-spacing: var(--t-h2-trk); }
+.t-h3 { font-family: var(--font-display); font-weight: var(--t-h3-wt);
+  font-size: var(--t-h3-size); line-height: var(--t-h3-lh);
+  letter-spacing: var(--t-h3-trk); }
+.t-h4 { font-family: var(--font-display); font-weight: var(--t-h4-wt);
+  font-size: var(--t-h4-size); line-height: var(--t-h4-lh);
+  letter-spacing: var(--t-h4-trk); }
+.t-lead { font-family: var(--font-body); font-weight: var(--t-lead-wt);
+  font-size: var(--t-lead-size); line-height: var(--t-lead-lh);
+  letter-spacing: var(--t-lead-trk); }
+.t-body { font-family: var(--font-body); font-weight: var(--t-body-wt);
+  font-size: var(--t-body-size); line-height: var(--t-body-lh); }
+.t-ui { font-family: var(--font-ui); font-weight: var(--t-ui-wt);
+  font-size: var(--t-ui-size); line-height: var(--t-ui-lh);
+  letter-spacing: var(--t-ui-trk); }
+.t-small { font-family: var(--font-body); font-weight: var(--t-small-wt);
+  font-size: var(--t-small-size); line-height: var(--t-small-lh); }
+.t-caption { font-family: var(--font-body); font-weight: var(--t-caption-wt);
+  font-size: var(--t-caption-size); line-height: var(--t-caption-lh);
+  letter-spacing: var(--t-caption-trk); text-transform: uppercase; }
+.t-mono { font-family: var(--font-mono); font-weight: var(--t-mono-wt);
+  font-size: var(--t-mono-size); line-height: var(--t-mono-lh);
+  font-feature-settings: "ss01"; }
+
+/* Element defaults --------------------------------------- */
+html, body { font-family: var(--font-body); color: var(--fg); background: var(--bg); }
+h1 { font: var(--t-h1-wt) var(--t-h1-size)/var(--t-h1-lh) var(--font-display);
+     letter-spacing: var(--t-h1-trk); }
+h2 { font: var(--t-h2-wt) var(--t-h2-size)/var(--t-h2-lh) var(--font-display);
+     letter-spacing: var(--t-h2-trk); }
+h3 { font: var(--t-h3-wt) var(--t-h3-size)/var(--t-h3-lh) var(--font-display);
+     letter-spacing: var(--t-h3-trk); }
+h4 { font: var(--t-h4-wt) var(--t-h4-size)/var(--t-h4-lh) var(--font-display);
+     letter-spacing: var(--t-h4-trk); }
+p  { font: var(--t-body-wt) var(--t-body-size)/var(--t-body-lh) var(--font-body); }
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.92em; }
+small { font-size: var(--t-small-size); line-height: var(--t-small-lh); }
+::selection { background: var(--patina-500); color: var(--bone-50); }

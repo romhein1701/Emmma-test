@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="_components.css">
+<style>
+  .card { padding: 26px 30px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px 14px; margin-top: 14px; align-items: end; }
+  .item { display: flex; flex-direction: column; align-items: stretch; gap: 6px; }
+  .item .lbl { font: 500 10px/1 var(--font-mono); color: var(--fg-faint); letter-spacing: 0.04em; text-align: center; }
+  .btn-focus { outline: 2px solid var(--patina-400); outline-offset: 2px; }
+</style></head>
+<body class="on-dark">
+<div class="card">
+  <div class="between"><span class="label">Button states · primary</span><span class="meta">default · hover · press · focus · disabled</span></div>
+  <div class="grid">
+    <div class="item"><button class="btn btn-primary btn-md">Pre-order</button><span class="lbl">DEFAULT</span></div>
+    <div class="item"><button class="btn btn-primary btn-md" style="background:var(--patina-400)">Pre-order</button><span class="lbl">HOVER</span></div>
+    <div class="item"><button class="btn btn-primary btn-md" style="background:var(--patina-600);transform:scale(.98)">Pre-order</button><span class="lbl">PRESS</span></div>
+    <div class="item"><button class="btn btn-primary btn-md btn-focus">Pre-order</button><span class="lbl">FOCUS</span></div>
+    <div class="item"><button class="btn btn-primary btn-md" disabled>Pre-order</button><span class="lbl">DISABLED</span></div>
+  </div>
+</div>
+</body></html>

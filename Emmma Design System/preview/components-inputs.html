@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="_components.css">
+<style>
+  .card { padding: 24px 30px; }
+  .stack { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; }
+</style></head>
+<body class="on-dark">
+<div class="card">
+  <div class="between"><span class="label">Text fields</span><span class="meta">Default · Focus · With placeholder</span></div>
+  <div class="stack">
+    <div class="field">
+      <label class="field-label">Email — for early access invite</label>
+      <div class="input">
+        <input placeholder="you@home.org">
+      </div>
+    </div>
+    <div class="field">
+      <label class="field-label">Capsule name</label>
+      <div class="input" style="border-color: var(--patina-400);">
+        <input value="Île de Ré · 07.2026">
+      </div>
+    </div>
+    <div class="field">
+      <label class="field-label">Shipping country</label>
+      <div class="input">
+        <input placeholder="Switzerland, France, Belgium, …">
+        <span style="font: 500 12px/1 var(--font-mono); color: var(--fg-faint);">EU only · batch 01</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

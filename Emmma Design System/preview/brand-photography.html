@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 24px 26px; }
+  .row  { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; margin-top: 14px; }
+  .frame {
+    position: relative; aspect-ratio: 4/5; border-radius: 14px; overflow: hidden;
+    background-color: #1A1716; background-size: cover; background-position: center;
+    box-shadow: 0 1px 2px 0 rgba(23,23,23,0.05);
+  }
+  .frame.wide { aspect-ratio: 5/4; }
+  .frame .tag-line {
+    position: absolute; left: 14px; bottom: 12px;
+    font: 500 11px/1 var(--font-mono); color: #F7F3F2;
+    background: rgba(15,14,13,0.55); backdrop-filter: blur(6px);
+    padding: 6px 8px; border-radius: 6px; letter-spacing: 0.03em;
+  }
+  .stack { display: flex; flex-direction: column; gap: 14px; }
+  .specs { font: 400 13px/1.5 var(--font-body); color: var(--fg-muted); }
+  .specs b { color: var(--fg); font-weight: 500; }
+  .specs span { display: inline-block; margin-right: 8px; }
+  .swatch-row { display:flex; gap: 4px; margin-top: 8px; }
+  .sb { width: 28px; height: 28px; border-radius: 6px; }
+</style></head>
+<body>
+<div class="card">
+  <div class="between"><span class="label">Photography · the warm grain</span><span class="meta">Window light · golden hour</span></div>
+  <div class="row">
+    <div class="frame wide" style="background-image:url(../assets/hero-photo.jpg)">
+      <span class="tag-line">capsule · La Rochelle · 07.2026</span>
+    </div>
+    <div class="stack">
+      <div class="frame" style="background-image:url(../assets/feature-photo.jpg)">
+        <span class="tag-line">device · carbon</span>
+      </div>
+      <div class="specs">
+        <b>White balance</b> 4800–5400 K — warm.<br>
+        <b>Saturation</b> −8 to −15 %. Greens muted, ambers pushed.<br>
+        <b>Grain</b> Subtle, organic. Never sharpened.
+        <div class="swatch-row">
+          <div class="sb" style="background:#E1712B"></div>
+          <div class="sb" style="background:#928617"></div>
+          <div class="sb" style="background:#7A6F6C"></div>
+          <div class="sb" style="background:#D6C8C5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

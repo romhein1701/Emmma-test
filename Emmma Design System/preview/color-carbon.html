@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .stack { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 14px; }
+  .sw { aspect-ratio: 1.4 / 1; border-radius: 10px; display:flex; flex-direction:column;
+    justify-content:flex-end; padding: 10px; box-sizing:border-box; border: 1px solid rgba(247,243,242,0.06); }
+  .sw .name { font: 500 11px/1.2 var(--font-ui); color: var(--linen-50); }
+  .sw .hex  { font: 500 11px/1.2 var(--font-mono); color: var(--linen-300); margin-top: 3px; letter-spacing: 0.02em;}
+  .sw.invert .name, .sw.invert .hex { color: var(--carbon-100); }
+  .sw.invert .hex { color: var(--carbon-50); }
+</style></head>
+<body>
+<div class="card">
+  <div class="between">
+    <span class="label">Carbon — dark canvas</span>
+    <span class="meta">Device housing · text on light</span>
+  </div>
+  <div class="stack">
+    <div class="sw" style="background:#0F0E0D"><span class="name">canvas</span><span class="hex">0F0E0D</span></div>
+    <div class="sw" style="background:#1A1716"><span class="name">surface</span><span class="hex">1A1716</span></div>
+    <div class="sw" style="background:#292625"><span class="name">sunken</span><span class="hex">292625</span></div>
+    <div class="sw" style="background:#2E2928"><span class="name">border</span><span class="hex">2E2928</span></div>
+    <div class="sw" style="background:#524A48"><span class="name">muted</span><span class="hex">524A48</span></div>
+  </div>
+</div>
+</body></html>

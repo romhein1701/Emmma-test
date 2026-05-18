@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .stack { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+  .sig { border-radius: 10px; padding: 12px; min-height: 96px; display:flex; flex-direction:column;
+    justify-content:space-between; border: 1px solid rgba(247,243,242,0.06); }
+  .sig .name { font: 500 12px/1 var(--font-ui); letter-spacing: 0.02em; }
+  .sig .hex  { font: 500 10px/1 var(--font-mono); letter-spacing: 0.02em; opacity: 0.85; }
+  .sig .demo { font-family: var(--font-display); font-weight: 500; font-size: 32px; letter-spacing: -0.03em; line-height: 1; }
+</style></head>
+<body>
+<div class="card">
+  <div class="between"><span class="label">Signal — status colors</span><span class="meta">Kept distinct from brand</span></div>
+  <div class="stack">
+    <div class="sig" style="background:rgba(42,111,219,0.12);color:#79A6F0">
+      <span class="demo">i</span>
+      <div><div class="name">info</div><div class="hex">2A6FDB</div></div>
+    </div>
+    <div class="sig" style="background:rgba(31,138,91,0.12);color:#5BC18C">
+      <span class="demo">✓</span>
+      <div><div class="name">success</div><div class="hex">1F8A5B</div></div>
+    </div>
+    <div class="sig" style="background:rgba(146,134,23,0.16);color:#C7BE5C">
+      <span class="demo">!</span>
+      <div><div class="name">warning</div><div class="hex">928617</div></div>
+    </div>
+    <div class="sig" style="background:rgba(197,48,48,0.14);color:#E58585">
+      <span class="demo">×</span>
+      <div><div class="name">error</div><div class="hex">C53030</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

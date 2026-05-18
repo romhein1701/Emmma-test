@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .row { display: flex; align-items: center; padding: 6px 0; gap: 14px; }
+  .row + .row { border-top: 1px solid var(--border-soft); }
+  .tok { width: 64px; font: 500 12px/1 var(--font-mono); color: var(--fg-subtle); }
+  .px  { width: 52px; font: 500 12px/1 var(--font-mono); color: var(--fg-faint); text-align: right; }
+  .bar { height: 12px; background: linear-gradient(90deg, var(--patina-500), var(--patina-300));
+    border-radius: 2px; }
+</style></head>
+<body>
+<div class="card">
+  <div class="between"><span class="label">Spacing scale · 8pt grid</span><span class="meta">4pt sub-step</span></div>
+  <div style="margin-top:10px">
+    <div class="row"><span class="tok">space-1</span><div class="bar" style="width:4px"></div><span class="px">4 px</span></div>
+    <div class="row"><span class="tok">space-2</span><div class="bar" style="width:8px"></div><span class="px">8 px</span></div>
+    <div class="row"><span class="tok">space-3</span><div class="bar" style="width:12px"></div><span class="px">12 px</span></div>
+    <div class="row"><span class="tok">space-4</span><div class="bar" style="width:16px"></div><span class="px">16 px</span></div>
+    <div class="row"><span class="tok">space-5</span><div class="bar" style="width:24px"></div><span class="px">24 px</span></div>
+    <div class="row"><span class="tok">space-6</span><div class="bar" style="width:32px"></div><span class="px">32 px</span></div>
+    <div class="row"><span class="tok">space-7</span><div class="bar" style="width:48px"></div><span class="px">48 px</span></div>
+    <div class="row"><span class="tok">space-8</span><div class="bar" style="width:64px"></div><span class="px">64 px</span></div>
+    <div class="row"><span class="tok">space-9</span><div class="bar" style="width:96px"></div><span class="px">96 px</span></div>
+    <div class="row"><span class="tok">space-10</span><div class="bar" style="width:128px"></div><span class="px">128 px</span></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { background: #0F0E0D; }
+  .stack { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .pair { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px;
+    border-radius: 10px; background: #1A1716; border: 1px solid #2E2928; }
+  .pair .txt { font-family: var(--font-display); font-weight: 500; font-size: 20px; letter-spacing: -0.02em; }
+  .pair .tag { display:flex; flex-direction: column; gap: 2px; align-items:flex-end; }
+  .pair .tag .n { font: 500 11px/1 var(--font-ui); color: var(--linen-300); }
+  .pair .tag .h { font: 500 10px/1 var(--font-mono); color: var(--linen-400); margin-top: 4px; letter-spacing: 0.02em; }
+</style></head>
+<body>
+<div class="card">
+  <div class="between"><span class="label">Linen — text on dark</span><span class="meta">4-tier hierarchy</span></div>
+  <div class="stack">
+    <div class="pair"><span class="txt" style="color:#F7F3F2">Capsules</span>
+      <div class="tag"><span class="n">fg</span><span class="h">F7F3F2</span></div></div>
+    <div class="pair"><span class="txt" style="color:#D6C8C5">07.2026</span>
+      <div class="tag"><span class="n">fg-muted</span><span class="h">D6C8C5</span></div></div>
+    <div class="pair"><span class="txt" style="color:#9E8F8A">132 archives</span>
+      <div class="tag"><span class="n">fg-subtle</span><span class="h">9E8F8A</span></div></div>
+    <div class="pair"><span class="txt" style="color:#7A6F6C">Shared with Romain</span>
+      <div class="tag"><span class="n">fg-faint</span><span class="h">7A6F6C</span></div></div>
+  </div>
+</div>
+</body></html>

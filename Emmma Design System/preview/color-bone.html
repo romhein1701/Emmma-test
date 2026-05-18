@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { background: var(--bone-50); color: var(--carbon-100); }
+  .stack { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 14px; }
+  .sw { aspect-ratio: 1.2 / 1; border-radius: 10px; display:flex; flex-direction:column;
+    justify-content:flex-end; padding: 8px; box-sizing:border-box; border: 1px solid rgba(46,41,40,0.06); }
+  .sw .name { font: 500 11px/1.2 var(--font-ui); color: var(--carbon-100); }
+  .sw .hex  { font: 500 10px/1.2 var(--font-mono); color: var(--carbon-50); margin-top: 3px; letter-spacing: 0.02em; }
+  .sw.dark .name { color: var(--linen-50); }
+  .sw.dark .hex  { color: var(--linen-300); }
+  .label { color: var(--carbon-50); }
+  .meta { color: var(--bone-600); }
+</style></head>
+<body>
+<div class="card">
+  <div class="between">
+    <span class="label">Bone — light canvas</span>
+    <span class="meta">Paper · print · companion app light</span>
+  </div>
+  <div class="stack">
+    <div class="sw" style="background:#FAFAF7"><span class="name">50</span><span class="hex">FAFAF7</span></div>
+    <div class="sw" style="background:#F7F3ED"><span class="name">100</span><span class="hex">F7F3ED</span></div>
+    <div class="sw" style="background:#F5F5EE"><span class="name">200</span><span class="hex">F5F5EE</span></div>
+    <div class="sw" style="background:#EEEDE2"><span class="name">300</span><span class="hex">EEEDE2</span></div>
+    <div class="sw" style="background:#E2E0CF"><span class="name">400</span><span class="hex">E2E0CF</span></div>
+    <div class="sw" style="background:#D1CEBC"><span class="name">500</span><span class="hex">D1CEBC</span></div>
+  </div>
+</div>
+</body></html>

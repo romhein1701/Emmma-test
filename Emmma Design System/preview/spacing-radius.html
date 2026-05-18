@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 14px; align-items: end; }
+  .ch { background: var(--carbon-400); border: 1px solid var(--carbon-100);
+    display:flex; align-items:center; justify-content:center; color: var(--linen-300);
+    font: 500 11px/1 var(--font-mono); }
+  .lab { display:flex; flex-direction:column; align-items:center; gap: 6px; }
+  .lab .n { font: 500 11px/1 var(--font-ui); color: var(--fg-muted); }
+  .lab .v { font: 500 10px/1 var(--font-mono); color: var(--fg-faint); }
+</style></head>
+<body>
+<div class="card">
+  <div class="between"><span class="label">Radius · corner ladder</span><span class="meta">From tag to capsule</span></div>
+  <div class="row">
+    <div class="lab"><div class="ch" style="width:80px;height:64px;border-radius:4px">4</div><span class="n">xs</span><span class="v">tags</span></div>
+    <div class="lab"><div class="ch" style="width:80px;height:64px;border-radius:8px">8</div><span class="n">sm</span><span class="v">buttons</span></div>
+    <div class="lab"><div class="ch" style="width:80px;height:64px;border-radius:12px">12</div><span class="n">md</span><span class="v">tiles</span></div>
+    <div class="lab"><div class="ch" style="width:80px;height:64px;border-radius:16px">16</div><span class="n">lg</span><span class="v">cards</span></div>
+    <div class="lab"><div class="ch" style="width:80px;height:64px;border-radius:24px">24</div><span class="n">xl</span><span class="v">capsule</span></div>
+    <div class="lab"><div class="ch" style="width:64px;height:64px;border-radius:999px">●</div><span class="n">pill</span><span class="v">avatar</span></div>
+  </div>
+</div>
+</body></html>

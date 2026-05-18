@@ -1,0 +1,218 @@
+/* Emmma component primitives — used by preview cards and the UI kit. */
+
+/* ---------- Buttons ---------- */
+.btn {
+  -webkit-appearance: none; appearance: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; border: 1px solid transparent; cursor: pointer;
+  font-family: var(--font-ui); font-weight: 500; letter-spacing: -0.005em;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.98); }
+.btn:focus-visible {
+  outline: 2px solid var(--patina-400);
+  outline-offset: 2px;
+}
+.btn[disabled] { opacity: 0.4; pointer-events: none; }
+
+/* Sizes */
+.btn-lg { height: 48px; padding: 0 24px; font-size: 16px; line-height: 1; }
+.btn-md { height: 40px; padding: 0 18px; font-size: 15px; line-height: 1; }
+.btn-sm { height: 32px; padding: 0 14px; font-size: 13px; line-height: 1; }
+
+/* Variants — Primary (filled patina) */
+.btn-primary {
+  background: var(--patina-500); color: var(--bone-50);
+}
+.btn-primary:hover { background: var(--patina-400); }
+.btn-primary:active { background: var(--patina-600); }
+
+/* Secondary (filled bone-300 on light / surface on dark) */
+.btn-secondary {
+  background: var(--bone-300); color: var(--carbon-100);
+}
+[data-theme="light"] .btn-secondary,
+.surface-light .btn-secondary { background: var(--bone-300); color: var(--carbon-100); }
+.btn-secondary:hover { background: var(--bone-400); }
+.btn-secondary:active { background: var(--bone-500); }
+
+/* On dark, secondary uses surface-2 */
+.on-dark .btn-secondary { background: var(--surface-2); color: var(--linen-50); border-color: var(--carbon-100); }
+.on-dark .btn-secondary:hover { background: #2A2624; }
+
+/* Outline */
+.btn-outline {
+  background: transparent; color: var(--fg);
+  border-color: var(--border-strong);
+}
+.btn-outline:hover { background: var(--bg-tint); }
+
+/* Text */
+.btn-text {
+  background: transparent; color: var(--fg);
+  padding-left: 8px; padding-right: 8px;
+}
+.btn-text:hover { color: var(--patina-400); }
+
+/* Accent (Amber) */
+.btn-accent {
+  background: var(--amber-400); color: var(--bone-50);
+}
+.btn-accent:hover { background: var(--amber-300); }
+.btn-accent:active { background: var(--amber-500); }
+
+/* ---------- Tags / chips ---------- */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 24px; padding: 0 8px; border-radius: var(--radius-xs);
+  font-family: var(--font-body); font-weight: 500; font-size: 12px; line-height: 1;
+}
+.tag-default { background: var(--bone-300); color: var(--carbon-100); }
+.tag-on-dark { background: var(--carbon-200); color: var(--linen-200); border: 1px solid var(--carbon-100); }
+.tag-info    { background: rgba(42,111,219,0.14);  color: #79A6F0; }
+.tag-success { background: rgba(31,138,91,0.14);   color: #5BC18C; }
+.tag-warning { background: rgba(146,134,23,0.18);  color: var(--patina-300); }
+.tag-error   { background: rgba(197,48,48,0.16);   color: #E58585; }
+
+/* "new" badge — solid amber */
+.badge-new {
+  display: inline-flex; align-items: center;
+  height: 24px; padding: 0 8px; border-radius: var(--radius-xs);
+  background: var(--amber-400); color: var(--bone-50);
+  font-family: var(--font-body); font-weight: 700; font-size: 13px; line-height: 1;
+  letter-spacing: 0.005em;
+}
+
+/* ---------- Inputs ---------- */
+.field {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.field-label {
+  font-family: var(--font-ui); font-weight: 500; font-size: 13px;
+  color: var(--fg-muted); letter-spacing: -0.005em;
+}
+.input {
+  display: flex; align-items: center; gap: 8px;
+  height: 44px; padding: 0 14px;
+  background: var(--surface-2); color: var(--fg);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: 15px;
+  transition: border-color var(--dur-fast) var(--ease-out),
+              background-color var(--dur-fast) var(--ease-out);
+}
+.input:focus-within { border-color: var(--patina-400); }
+.input input {
+  flex: 1; background: transparent; border: 0; outline: 0;
+  font: inherit; color: inherit; min-width: 0;
+}
+.input input::placeholder { color: var(--fg-faint); }
+
+/* ---------- Toggles ---------- */
+.switch {
+  position: relative; width: 44px; height: 24px;
+  background: var(--carbon-100); border-radius: 999px;
+  transition: background-color var(--dur-base) var(--ease-out);
+  cursor: pointer;
+}
+.switch::after {
+  content: ""; position: absolute; left: 3px; top: 3px;
+  width: 18px; height: 18px; border-radius: 999px;
+  background: var(--linen-200);
+  transition: transform var(--dur-base) var(--ease-out),
+              background-color var(--dur-base) var(--ease-out);
+}
+.switch.on { background: var(--patina-500); }
+.switch.on::after { transform: translateX(20px); background: var(--bone-50); }
+
+.checkbox {
+  width: 18px; height: 18px; border-radius: 4px;
+  border: 1.5px solid var(--border-strong); background: transparent;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background-color var(--dur-fast), border-color var(--dur-fast);
+}
+.checkbox.on { background: var(--patina-500); border-color: var(--patina-500); }
+.checkbox.on::after {
+  content: ""; width: 9px; height: 5px;
+  border-left: 2px solid var(--bone-50); border-bottom: 2px solid var(--bone-50);
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.radio {
+  width: 18px; height: 18px; border-radius: 999px;
+  border: 1.5px solid var(--border-strong); background: transparent;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.radio.on { border-color: var(--patina-500); }
+.radio.on::after {
+  content: ""; width: 9px; height: 9px; border-radius: 999px;
+  background: var(--patina-500);
+}
+
+/* ---------- Capsule card (the hero memory object) ---------- */
+.capsule {
+  --c-bg: var(--carbon-400);
+  --c-border: var(--carbon-100);
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--elev-1), inset 0 0 0 1px rgba(247,243,242,0.04);
+  padding: 24px;
+  color: var(--linen-50);
+  overflow: hidden;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.capsule.light {
+  --c-bg: #F5F5EE;
+  --c-border: var(--bone-500);
+  color: var(--carbon-100);
+  box-shadow: var(--elev-1);
+}
+.capsule .cap-head {
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.capsule .stack-images {
+  position: relative; width: 158px; height: 158px;
+}
+.capsule .stack-images .img {
+  position: absolute; border-radius: 12px; background-size: cover; background-position: center;
+  width: 110px; height: 110px;
+  border: 2px solid var(--c-bg);
+  box-shadow: 0 4px 14px -4px rgba(0,0,0,0.5);
+}
+.capsule .stack-images .img:nth-child(1) { left: 0; top: 0; transform: rotate(-4deg); }
+.capsule .stack-images .img:nth-child(2) { left: 24px; top: 24px; transform: rotate(2deg); z-index: 2; }
+.capsule .stack-images .img:nth-child(3) { left: 48px; top: 6px; transform: rotate(6deg); }
+.capsule .cap-title { font-family: var(--font-display); font-weight: 500;
+  font-size: 32px; line-height: 1.18; letter-spacing: -0.030em; margin: 0; }
+.capsule .cap-date  { font-family: var(--font-display); font-weight: 500;
+  font-size: 20px; line-height: 1.4; letter-spacing: -0.020em; margin: 0;
+  color: inherit; opacity: 0.9; }
+.capsule .cap-body  { font: 400 16px/1.55 var(--font-body); margin: 0;
+  color: var(--linen-200); }
+.capsule.light .cap-body { color: #524A48; }
+.capsule .cap-meta { display:flex; align-items:center; gap: 8px;
+  font: 500 13px/1 var(--font-body); color: var(--linen-400); }
+.capsule.light .cap-meta { color: #7A6F6C; }
+.capsule .cap-avatar {
+  width: 24px; height: 24px; border-radius: 999px; background-size: cover; background-position: center;
+}
+.capsule .cap-cta { display:flex; gap: 12px; margin-top: 6px; }
+.capsule .cap-tags { display:flex; gap: 6px; flex-wrap: wrap; }
+
+/* ---------- Avatar ---------- */
+.avatar { width: 40px; height: 40px; border-radius: 999px; background-size: cover; background-position: center;
+  border: 1.5px solid var(--bg); }
+.avatar.sm { width: 24px; height: 24px; }
+.avatar.lg { width: 56px; height: 56px; }
+.avatar-fallback {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bone-300); color: var(--carbon-100);
+  font: 500 14px/1 var(--font-ui);
+}

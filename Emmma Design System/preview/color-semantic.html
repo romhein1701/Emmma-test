@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 14px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-soft); }
+  .panel { padding: 18px; display:flex; flex-direction:column; gap: 14px; min-height: 230px; }
+  .panel.dark  { background: #0F0E0D; color: #F7F3F2; }
+  .panel.light { background: #FAFAF7; color: #2E2928; }
+  .token { display: flex; justify-content: space-between; align-items: center; font: 500 12px/1 var(--font-mono); }
+  .token .k { font-family: var(--font-ui); }
+  .swatch-line { width: 22px; height: 22px; border-radius: 6px; border: 1px solid rgba(127,127,127,0.18); }
+  .title { font: 500 16px/1 var(--font-ui); letter-spacing: -0.01em; margin-bottom: 6px; }
+  .panel.dark  .title { color: #F7F3F2; }
+  .panel.light .title { color: #2E2928; }
+  .row-line { display: grid; grid-template-columns: 22px 1fr auto; gap: 12px; align-items: center; }
+</style></head>
+<body>
+<div class="card">
+  <div class="between"><span class="label">Semantic tokens · both themes</span><span class="meta">Same names, different values</span></div>
+  <div class="split">
+    <div class="panel dark">
+      <div class="title">Dark</div>
+      <div class="row-line"><div class="swatch-line" style="background:#0F0E0D;border-color:#2E2928"></div><span class="k">--bg</span><span>0F0E0D</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#1A1716;border-color:#2E2928"></div><span class="k">--surface</span><span>1A1716</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#2E2928"></div><span class="k">--border</span><span>2E2928</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#F7F3F2"></div><span class="k">--fg</span><span>F7F3F2</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#9E8F8A"></div><span class="k">--fg-subtle</span><span>9E8F8A</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#928617"></div><span class="k">--brand</span><span>928617</span></div>
+    </div>
+    <div class="panel light">
+      <div class="title">Light</div>
+      <div class="row-line"><div class="swatch-line" style="background:#FAFAF7"></div><span class="k">--bg</span><span>FAFAF7</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#F5F5EE"></div><span class="k">--surface</span><span>F5F5EE</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#D1CEBC"></div><span class="k">--border</span><span>D1CEBC</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#2E2928"></div><span class="k">--fg</span><span>2E2928</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#9E9B87"></div><span class="k">--fg-subtle</span><span>9E9B87</span></div>
+      <div class="row-line"><div class="swatch-line" style="background:#928617"></div><span class="k">--brand</span><span>928617</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

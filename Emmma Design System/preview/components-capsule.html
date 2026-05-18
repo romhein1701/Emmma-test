@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="_components.css">
+<style>
+  .card { padding: 22px 22px 26px; }
+  .frame { display: grid; grid-template-columns: 1fr; }
+  .capsule { width: 100%; }
+</style></head>
+<body class="on-dark">
+<div class="card">
+  <div class="between" style="margin-bottom:14px;padding:0 8px">
+    <span class="label">Capsule card · the hero object</span>
+    <span class="meta">memory · phygital</span>
+  </div>
+  <div class="frame">
+    <div class="capsule">
+      <div class="cap-head">
+        <span class="badge-new">new</span>
+        <span class="tag tag-warning">132 archives</span>
+      </div>
+      <div style="display:flex; gap: 20px; align-items: flex-start;">
+        <div class="stack-images">
+          <div class="img" style="background-image:url(../assets/hero-photo.jpg)"></div>
+          <div class="img" style="background-image:url(../assets/feature-photo.jpg)"></div>
+          <div class="img" style="background-image:url(../assets/hero-photo.jpg);filter:hue-rotate(15deg) brightness(1.1)"></div>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+          <h3 class="cap-title">La Rochelle</h3>
+          <p class="cap-date">07.2026</p>
+          <p class="cap-body">On July 6th, my fiancé and I visited La Rochelle. The island of Île de Ré was the ideal place to catch the sunset after a long day.</p>
+        </div>
+      </div>
+      <div class="cap-meta">
+        <div class="cap-avatar" style="background:linear-gradient(135deg,#928617,#E1712B)"></div>
+        Shared with Romain
+      </div>
+      <div class="cap-cta">
+        <button class="btn btn-primary btn-md" style="flex:1">Show my souvenir</button>
+        <button class="btn btn-secondary btn-md" style="flex:1">Print this capsule</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

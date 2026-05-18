@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="_components.css">
+<style>
+  .card { padding: 22px 30px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; margin-top: 12px; }
+  .opt { display: flex; align-items: center; gap: 10px; font: 500 14px/1.2 var(--font-ui); color: var(--fg); }
+  .sub { display:block; color: var(--fg-subtle); font: 400 12px/1.4 var(--font-body); margin-top: 2px; }
+</style></head>
+<body class="on-dark">
+<div class="card">
+  <div class="between"><span class="label">Selection controls</span><span class="meta">Switch · Checkbox · Radio</span></div>
+  <div class="grid">
+    <div>
+      <div class="opt"><span class="switch on"></span> AI-curate weekly capsules</div>
+      <span class="sub">Runs on-device · never leaves home</span>
+    </div>
+    <div>
+      <div class="opt"><span class="switch"></span> Beam to companion app</div>
+      <span class="sub">End-to-end, peer-to-peer</span>
+    </div>
+    <div>
+      <div class="opt"><span class="checkbox on"></span> Print last 12 capsules as a book</div>
+    </div>
+    <div>
+      <div class="opt"><span class="checkbox"></span> Email me when batch 02 ships</div>
+    </div>
+    <div>
+      <div class="opt"><span class="radio on"></span> Carbon — black anodised</div>
+    </div>
+    <div>
+      <div class="opt"><span class="radio"></span> Bone — bead-blasted aluminium</div>
+    </div>
+  </div>
+</div>
+</body></html>

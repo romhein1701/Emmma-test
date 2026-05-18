@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; margin-top: 14px; align-items: stretch; }
+  .big {
+    background: #928617; border-radius: 14px; padding: 18px; color: var(--bone-50);
+    display:flex; flex-direction:column; justify-content:space-between; min-height: 168px;
+    border: 1px solid rgba(247,243,242,0.06);
+  }
+  .big .num { font: 500 56px/1 var(--font-display); letter-spacing: -0.04em; }
+  .big .sub { font: 500 12px/1.6 var(--font-ui); letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85; }
+  .ramp { display: grid; grid-template-rows: repeat(6, 1fr); gap: 6px; }
+  .step { display: flex; justify-content: space-between; align-items: center; padding: 0 10px;
+    border-radius: 6px; font: 500 11px/1 var(--font-mono); border: 1px solid rgba(247,243,242,0.06); }
+  .step .n { font-family: var(--font-ui); font-weight: 500; }
+  .step .h { color: var(--linen-300); }
+</style></head>
+<body>
+<div class="card">
+  <div class="between">
+    <span class="label">Patina — primary brand</span>
+    <span class="meta">Aged Swiss brass · #928617</span>
+  </div>
+  <div class="hero">
+    <div class="big">
+      <div class="num">Aa</div>
+      <div>
+        <div class="sub">Patina 500</div>
+        <div style="font: 500 13px/1 var(--font-mono); margin-top: 4px;">#928617</div>
+      </div>
+    </div>
+    <div class="ramp">
+      <div class="step" style="background:#F4F2D7;color:#3F3A0A"><span class="n">patina-100</span><span class="h">F4F2D7</span></div>
+      <div class="step" style="background:#E6E2A6;color:#3F3A0A"><span class="n">patina-200</span><span class="h">E6E2A6</span></div>
+      <div class="step" style="background:#C7BE5C;color:#3F3A0A"><span class="n">patina-300</span><span class="h">C7BE5C</span></div>
+      <div class="step" style="background:#A89B33;color:#1A1716"><span class="n">patina-400</span><span class="h">A89B33</span></div>
+      <div class="step" style="background:#7D7316;color:#FAFAF7"><span class="n">patina-600</span><span class="h">7D7316</span></div>
+      <div class="step" style="background:#3F3A0A;color:#FAFAF7"><span class="n">patina-800</span><span class="h">3F3A0A</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

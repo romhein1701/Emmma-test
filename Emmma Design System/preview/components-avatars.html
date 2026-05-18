@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="_components.css">
+<style>
+  .card { padding: 24px 30px; }
+  .row { display: flex; gap: 22px; align-items: center; margin-top: 14px; flex-wrap: wrap; }
+  .meta-c { font: 500 11px/1 var(--font-mono); color: var(--fg-faint); margin-top: 6px; text-align: center; }
+  .item { display: flex; flex-direction: column; align-items: center; }
+  .group { display: flex; }
+  .group .avatar { margin-left: -10px; }
+  .group .avatar:first-child { margin-left: 0; }
+</style></head>
+<body class="on-dark">
+<div class="card">
+  <div class="between"><span class="label">Avatars</span><span class="meta">Photo · Fallback · Group</span></div>
+  <div class="row">
+    <div class="item">
+      <div class="avatar sm" style="background-image:url(../assets/hero-photo.jpg)"></div>
+      <div class="meta-c">24 sm</div>
+    </div>
+    <div class="item">
+      <div class="avatar" style="background-image:url(../assets/feature-photo.jpg)"></div>
+      <div class="meta-c">40 md</div>
+    </div>
+    <div class="item">
+      <div class="avatar lg" style="background-image:url(../assets/hero-photo.jpg);background-position:top"></div>
+      <div class="meta-c">56 lg</div>
+    </div>
+    <div class="item">
+      <div class="avatar avatar-fallback">RM</div>
+      <div class="meta-c">fallback</div>
+    </div>
+    <div class="item">
+      <div class="group">
+        <div class="avatar" style="background-image:url(../assets/hero-photo.jpg)"></div>
+        <div class="avatar" style="background-image:url(../assets/feature-photo.jpg)"></div>
+        <div class="avatar avatar-fallback">+4</div>
+      </div>
+      <div class="meta-c">stack</div>
+    </div>
+  </div>
+</div>
+</body></html>
